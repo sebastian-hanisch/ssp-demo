@@ -9,14 +9,14 @@ Nach jeder Runde ist der Fluss ein **kostenminimaler Fluss seiner Menge**; die P
 Vehikel wie in den Vorgänger-Demos: ein Distributionsnetz (Werke → Verteilzentren → Filialen) mit Kosten je Einheit, dazu zwei Lehrnetze.
 
 **Einordnung in die Reihe (die Kanten des Graphen):** SSP setzt an der einen Schwäche an, die alle drei Vorgänger nennen: Kostenblindheit. Auf einem Netz mit Einheitskapazitäten zwischen Fahrzeugen und Aufträgen ist SSP die **Ungarische Methode** (Matching-Linie, `hungarian-demo`) – hier die allgemeine Fassung mit Kapazitäten.
-Der umgekehrte Weg (zuerst irgendein zulässiger Fluss, dann negative Kreise löschen) ist **Cycle-Canceling** (gebaut: [cycle-canceling-demo](https://github.com/sebastian-hanisch/cycle-canceling-demo)); **Cost Scaling** ist Push-Relabel mit ε-optimalen Preisen. Bisher gebaut: die ersten fünf Stücke.
+Der umgekehrte Weg (zuerst irgendein zulässiger Fluss, dann negative Kreise löschen) ist **Cycle-Canceling** (gebaut: [cycle-canceling-demo](https://github.com/sebastian-hanisch/cycle-canceling-demo)); **Cost Scaling** (gebaut: [cost-scaling-demo](https://github.com/sebastian-hanisch/cost-scaling-demo)) ist Push-Relabel mit ε-optimalen Preisen. Bisher gebaut: die ersten sechs Stücke.
 ```
 edmonds-karp-demo (Wurzel: Restgraph, Rückkanten, Max-Flow = Min-Cut)                  [gebaut]
   ├─ dinic-demo (viele kürzeste Wege je Phase: Niveaugraph, blockierender Fluss)        [gebaut]
   ├─ push-relabel-demo (kein Weg: Überschüsse schieben, Höhen anheben)                 [gebaut]
   └─ ssp-demo (Kosten: der billigste Weg im Restgraphen, Potenziale)                    [dieses Stück]
        ├─ cycle-canceling-demo → Netzwerksimplex (network-flow-demo)                    [gebaut / gebaut als Fall-Demo]
-       ├─ cost-scaling-demo (Push-Relabel + ε-Skalierung, das nutzt OR-Tools)           [geplant]
+       ├─ cost-scaling-demo (Push-Relabel + ε-Skalierung, das nutzt OR-Tools)           [gebaut]
        └─ multicommodity-demo → Column Generation, Garg-Könemann,
           Fixkosten-Netzwerkdesign → Benders-Zerlegung, Slope Scaling                   [geplant]
 ```
