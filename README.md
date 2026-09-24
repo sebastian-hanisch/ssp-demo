@@ -9,7 +9,7 @@ Nach jeder Runde ist der Fluss ein **kostenminimaler Fluss seiner Menge**; die P
 Vehikel wie in den Vorgänger-Demos: ein Distributionsnetz (Werke → Verteilzentren → Filialen) mit Kosten je Einheit, dazu zwei Lehrnetze.
 
 **Einordnung in die Reihe (die Kanten des Graphen):** SSP setzt an der einen Schwäche an, die alle drei Vorgänger nennen: Kostenblindheit. Auf einem Netz mit Einheitskapazitäten zwischen Fahrzeugen und Aufträgen ist SSP die **Ungarische Methode** (Matching-Linie, `hungarian-demo`) – hier die allgemeine Fassung mit Kapazitäten.
-Der umgekehrte Weg (zuerst irgendein zulässiger Fluss, dann negative Kreise löschen) ist **Cycle-Canceling** (gebaut: [cycle-canceling-demo](https://github.com/sebastian-hanisch/cycle-canceling-demo)); **Cost Scaling** (gebaut: [cost-scaling-demo](https://github.com/sebastian-hanisch/cost-scaling-demo)) ist Push-Relabel mit ε-optimalen Preisen. Bisher gebaut: die ersten elf Stücke.
+Der umgekehrte Weg (zuerst irgendein zulässiger Fluss, dann negative Kreise löschen) ist **Cycle-Canceling** (gebaut: [cycle-canceling-demo](https://github.com/sebastian-hanisch/cycle-canceling-demo)); **Cost Scaling** (gebaut: [cost-scaling-demo](https://github.com/sebastian-hanisch/cost-scaling-demo)) ist Push-Relabel mit ε-optimalen Preisen. Bisher gebaut: alle zwölf Stücke der Hauptlinie.
 ```
 edmonds-karp-demo (Wurzel: Restgraph, Rückkanten, Max-Flow = Min-Cut)                  [gebaut]
   ├─ dinic-demo (viele kürzeste Wege je Phase: Niveaugraph, blockierender Fluss)        [gebaut]
@@ -22,7 +22,7 @@ edmonds-karp-demo (Wurzel: Restgraph, Rückkanten, Max-Flow = Min-Cut)          
             ├─ garg-koenemann-demo (Näherung mit Preisen, ohne LP-Löser)                [gebaut]
             └─ fixkosten-netzdesign-demo (Fixkosten: Schranke und Schnitte)             [gebaut]
                  ├─ benders-demo (Entwurf im Master, Fluss im Teilproblem)              [gebaut]
-                 └─ Slope Scaling (Heuristik für große Netze)                           [geplant]
+                 └─ slope-scaling-demo (Fixkosten linearisieren, ohne Beweis)           [gebaut]
 ```
 
 ## Ergebnis (Zahlen aus den Tests)
