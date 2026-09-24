@@ -405,11 +405,11 @@ st.markdown(
 | **Alle Kosten sind nicht negativ** | Mit negativen Kosten sind die Startpotenziale 0 nicht gültig; man braucht einmal Bellman-Ford am Anfang. Hier gibt es nur Kosten ≥ 0 - nur Rückkanten sind negativ. | Nicht Thema dieser Demo |
 | **Jede Runde ist kostenminimal für ihre Menge** | Das ist die Stärke: SSP hält Optimalität und baut die Zulässigkeit (die gewünschte Menge) Schritt für Schritt auf. Man kann das auch umgekehrt tun: zuerst irgendein zulässiger Fluss, dann negative Kreise löschen. | **Cycle-Canceling** (Stück 5, gebaut) |
 | **Die Laufzeit hängt an der Menge** | SSP braucht höchstens so viele Runden wie der Flusswert (**pseudopolynomial**): bei Kapazitäten in Millionen kann es sehr viele Runden geben. Hier bleibt die Rundenzahl von der Größe der Kapazitäten unberührt. | **Cost Scaling** (Push-Relabel mit ε-optimalen Preisen, gebaut), **Netzwerksimplex** (Demo „network-flow-demo“) |
-| **Ein Gut, teilbar** | Alle Waren sind gleich und beliebig teilbar. Mehrere Güter auf gemeinsamen Kanten machen den Fluss im Allgemeinen gebrochen. | **Mehrgüterfluss** (später in dieser Linie) |
+| **Ein Gut, teilbar** | Alle Waren sind gleich und beliebig teilbar. Mehrere Güter auf gemeinsamen Kanten machen den Fluss im Allgemeinen gebrochen. | **Mehrgüterfluss** (gebaut: multicommodity-demo) |
 | **Keine Zeit** | Ein Fluss ist eine Momentaufnahme; Wartezeiten und Fahrpläne fehlen. | Zeit-Raum-Netz in der Demo „leercontainer-demo“ |
 """
 )
-st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: Edmonds-Karp, Dinic, Push-Relabel, Successive Shortest Paths (dieses Stück), Cycle-Canceling (gebaut), Cost Scaling (gebaut), Mehrgüterfluss, Column Generation, Garg-Könemann, Fixkosten-Netzwerkdesign, Benders-Zerlegung und Slope Scaling - bisher sind die ersten sechs gebaut.")
+st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: Edmonds-Karp, Dinic, Push-Relabel, Successive Shortest Paths (dieses Stück), Cycle-Canceling (gebaut), Cost Scaling (gebaut), Mehrgüterfluss (gebaut), Column Generation, Garg-Könemann, Fixkosten-Netzwerkdesign, Benders-Zerlegung und Slope Scaling - bisher sind die ersten sieben gebaut.")
 
 st.markdown("---")
 
