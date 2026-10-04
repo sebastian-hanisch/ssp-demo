@@ -90,7 +90,7 @@ with st.expander("So funktioniert Successive Shortest Paths", expanded=True):
 3. **Billigster Weg:** finde den Weg von S nach T im Restgraphen mit den kleinsten Gesamtkosten je Einheit - nicht mit den wenigsten Kanten. Fülle ihn bis zum Engpass auf. Der Preis dieser Einheiten steht in der Runde fest.
 4. **Warum das genügt:** ein Fluss ist genau dann kostenminimal für seine Menge, wenn der Restgraph **keinen Kreis mit negativen Kosten** hat. Ein billigster Weg erzeugt keinen; also bleibt jeder Zwischenfluss kostenminimal - bis kein Weg mehr existiert.
 5. **Potenziale:** jeder Knoten bekommt einen Schattenpreis $\pi(v)$. Mit den **reduzierten Kosten** $c+\pi(u)-\pi(v)\ge 0$ läuft die Suche mit Dijkstra statt mit Bellman-Ford. Nach jeder Suche steigt $\pi(v)$ um die gefundene Entfernung (höchstens die von T) - die Potenziale bleiben gültig und sind am Ende das **Optimalitätszertifikat**.
-6. **Rückkanten:** die zweite Einheit im Beispiel „Raute“ muss eine Kante zurücknehmen - der billigste Weg kann eine Rückkante nutzen, deren Kosten negativ sind. Ohne Potenziale (Dijkstra auf den echten Kosten) geht das schief.
+6. **Rückkanten:** die zweite Einheit im Beispiel „Raute“ muss eine Kante zurücknehmen - der billigste Weg kann eine Rückkante nutzen, deren Kosten negativ sind. Ohne Potenziale (Dijkstra auf den echten Kosten) kann das schiefgehen - in der Raute selbst noch nicht, in 32 von 100 Standard-Zufallsnetzen schon.
         """
     )
 
@@ -450,6 +450,6 @@ st.markdown("---")
 
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Netzwerkfluss: vom Max-Flow zum Netzdesign](https://sebastianhanisch.net/konzepte-netzwerkfluss.html)."
 )
