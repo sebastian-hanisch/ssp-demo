@@ -1,6 +1,6 @@
 # Successive Shortest Paths – der billigste Fluss – Streamlit-Demo
 
-*(noch nicht deployed)*
+**[→ Demo live ausprobieren](https://sebastianhanisch-ssp-demo.streamlit.app/)**
 
 Viertes Stück der **Netzwerkfluss-Linie** der "Konzepte"-Reihe für die Website "Sebastian Hanisch – Operations Research und Machine Learning", Fortsetzung von [Edmonds-Karp](https://github.com/sebastian-hanisch/edmonds-karp-demo), [Dinic](https://github.com/sebastian-hanisch/dinic-demo) und [Push-Relabel](https://github.com/sebastian-hanisch/push-relabel-demo):
 anders als die Fall-Demos im Portfolio (ein Anwendungsfall, mehrere Verfahren im Vergleich) zeigt diese Demo **ein** Verfahren – **Successive Shortest Paths** (SSP; Jewell 1958, Busacker und Gowen 1960, Iri 1960) – an einem wachsenden Beispiel.
